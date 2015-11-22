@@ -1,0 +1,24 @@
+Installation:
+
+    git clone https://github.com/redkestrel/dotfiles 
+
+Create symlinks:
+
+    ln -s ~/dotfiles/vimrc ~/.vimrc
+    ln -s ~/dotfiles/tmux.conf ~/.tmux.conf
+
+NOTE: if doesn't work you may need to run:
+    sudo apt-get install ruby-dev
+
+If get E319 error when run vi try installing these:
+    apt-get install vim-gui-common
+    apt-get install vim-runtime
+
+
+Vundle
+    Use vundle to isntall plugins
+
+    Command-T needs compiling:
+    cd ~/.vim/bundle/command-t/ruby/command-t
+    ruby extconf.rb
+    make

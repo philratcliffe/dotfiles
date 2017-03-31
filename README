@@ -7,7 +7,7 @@ If get E319 error when run vim try installing these:
 
 
 Vundle
-    Use vundle to isntall plugins
+    Use vundle to install plugins
 
     Command-T needs compiling:
     cd ~/.vim/bundle/command-t/ruby/command-t

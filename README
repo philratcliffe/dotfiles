@@ -8,6 +8,8 @@ If get E319 error when run vim try installing these:
 
 Vundle
     Use vundle to install plugins
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    open vim and type :PluginInstall
 
     Command-T needs compiling:
     cd ~/.vim/bundle/command-t/ruby/command-t

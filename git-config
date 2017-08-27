@@ -1,0 +1,15 @@
+# To use an ssh key to push to the github repo rather than a password, I must
+# set up the ./git/config file like this. In particular, note the url line in
+# the [remote "origin"] section.
+
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = git@github.com-philr:philratcliffe/dotfiles.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master

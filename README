@@ -19,4 +19,5 @@ Vundle
 Missing dot
 ===========
 Note most of the config files are actually stored in git without the leading dot (period, full stop).
-Just copy the file to the correct name. For example, cp dotfiles/tmux.conf ~/.tmux.conf.
+Just copy the file to the correct name. For example, cp dotfiles/tmux.conf ~/.tmux.conf 
+and cp cdpath ~/.cdpath

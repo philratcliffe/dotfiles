@@ -38,4 +38,4 @@ Missing dot
 ===========
 I have stored the config files in git without the leading dot (period, full stop).
 Just copy the file to the correct name. For example, cp dotfiles/tmux.conf ~/.tmux.conf 
-and cp cdpath ~/.cdpath etc.
+and cp dotfiles/cdpath ~/.cdpath etc.

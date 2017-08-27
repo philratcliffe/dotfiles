@@ -1,9 +1,20 @@
+# My dotfiles
+
+## Overview
+This repo is where I keep my dotfiles.
+
 NOTE: if problems with vim, you may need to run:
-    sudo apt-get install ruby-dev
+'''bash 
+$ sudo apt-get install ruby-dev
+'''
 
 If get E319 error when run vim try installing these:
-    apt-get install vim-gui-common
-    apt-get install vim-runtime
+'''bash
+$ sudo apt-get install vim-gui-common
+'''
+'''bash
+apt-get install vim-runtime
+'''
 
 
 Vundle

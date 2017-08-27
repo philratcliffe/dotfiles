@@ -1,1 +1,3 @@
-export CDPATH=.:~/projects:~/tmp
+
+# A list of the places to look for the directory you're after
+export CDPATH=.:~:~/projects:~/tmp:/projects/redkestrel/redkestrel/redkestrel

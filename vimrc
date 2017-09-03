@@ -11,22 +11,13 @@ call vundle#begin()
 
 " let Vundle manage Vundle
 " required!
-Plugin 'gmarik/vundle'
+"Plugin 'gmarik/vundle'
 Plugin 'Command-T'
-Plugin 'ctrlp.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
 Plugin 'davidhalter/jedi-vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'scrooloose/syntastic'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'kevinw/pyflakes-vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'wombat256.vim'
+
+" Theme
+Plugin 'morhetz/gruvbox'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -48,9 +39,8 @@ vnoremap <C-c> "*y
 "" set bs=2     " make backspace behave like normal again
 
 
-" Rebind <Leader> key
-" let mapleader = ","
-let mapleader = "\<Space>"
+" Key Maps
+let mapleader = "\<Space>"              " The leader is used to begin many hotkey sequences 
 
 noremap <Leader>\ :NERDTree .<CR>
 
@@ -63,22 +53,6 @@ nnoremap <leader>a :Ack
 " Quick quit command
 noremap <Leader>e :quit<CR>  " Quit current window
 "" noremap <Leader>E :qa!<CR>   " Quit all windows
-
-
-" Bind nohl
-" Removes highlight of your last search
-" ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-"" noremap <C-n> :nohl<CR>
-"" vnoremap <C-n> :nohl<CR>
-"" inoremap <C-n> :nohl<CR>
-
-
-" Quicksave command
-"" noremap <C-Z> :update<CR>
-"" vnoremap <C-Z> <C-C>:update<CR>
-"" inoremap <C-Z> <C-O>:update<CR>
-
-
 
 
 " bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
@@ -113,10 +87,15 @@ autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
 
-" Color scheme
-colorscheme wombat256 
-" set background=dark
 
+" Use 'set termguicolors' below instead of t_Co=256 if using terminal with true color
+" support like gnome-terminal. Otherwise source the 256 color in link above to make the
+" colors right.
+set t_Co=256           "use 256 colors
+
+let g:gruvbox_italic=1 "allow italics
+colorscheme gruvbox    "set vim colorscheme
+set background=dark "use dark variant
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
@@ -124,9 +103,6 @@ filetype plugin indent on
 syntax on
 
 
-" Showing line numbers and length
-" set number  " show line numbers
-set tw=79   " width of document (used by gd)
 set nowrap  " don't automatically wrap on load
 set fo-=t   " don't automatically wrap text when typing
 set colorcolumn=80
@@ -142,13 +118,18 @@ set history=10000
 set undolevels=700
 
 
-" Real programmers don't use TABs but spaces
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set shiftround
-set expandtab
+" Preferred formating
+set textwidth=80
+set tabstop=4           " A tab is 4 spaces
+set softtabstop=4       " Insert spaces when tab is pressed
+set shiftwidth=4        " An indent is 4 spaces
+set shiftround          " Round indent to nearest shiftwidth multiple
+set expandtab           " Always use spaces
 
+
+" Appearance
+set cursorline
+set number
 
 " Make search case insensitive
 set hlsearch
@@ -176,8 +157,8 @@ if &term =~ "xterm" || &term =~ "screen"
   " and Vim (7.3, with patches 1-843), this is all I need:
   let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 
-  " when I originally started using Command-T inside a terminal,
-  " I used to need these as well:
+  " when I started using Command-T inside a terminal,
+  " I needed these also:
   let g:CommandTSelectNextMap = ['<C-j>', '<ESC>OB']
   let g:CommandTSelectPrevMap = ['<C-k>', '<ESC>OA']
 endif

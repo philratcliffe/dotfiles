@@ -11,9 +11,9 @@ call vundle#begin()
 " let Vundle manage Vundle
 " required!
 "Plugin 'gmarik/vundle'
+Plugin 'Command-T'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'kien/ctrlp.vim'
 
 " Theme
 Plugin 'morhetz/gruvbox'

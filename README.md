@@ -22,10 +22,10 @@ $ make
  ```
 The Command-T <leader> key is mapped to spacebar. So to start Command-T,
 press spacebar then press t.
- 
-## Trouble shooting
+
+### Trouble shooting
 NOTE: if you have problems with vim, you may need to run:
-```bash 
+```bash
 $ sudo apt-get install ruby-dev
 ```
 
@@ -38,7 +38,19 @@ $ sudo apt-get install vim-runtime
 ```
 
 
+## mac OS
+With iTerm2 and Mac OS, .bashrc is not sourced. However, with the
+~/.bash_profile is sourced. So a source .bashrc entry in ~/.bash_profile
+does the job.
+
 ## Missing dot
-I have stored the config files in git without the leading dot (period, full stop).
-Just copy the file to the correct name. For example, cp dotfiles/tmux.conf ~/.tmux.conf 
-and cp dotfiles/cdpath ~/.cdpath etc.
+I added the config files to git without the leading dot (period, full stop).
+Just copy the file to the correct name. For example,
+
+```bash
+$cp dotfiles/tmux.conf ~/.tmux.conf
+```bash
+
+```bash
+$cp dotfiles/cdpath ~/.cdpath etc.
+```bash

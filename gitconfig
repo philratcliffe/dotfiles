@@ -1,7 +1,7 @@
+# Copy this file to ~/.gitconfig
 [user]
     email = phil@philratcliffe.co.uk
     name = Phil Ratcliffe
-
 
 [alias]
     co = checkout

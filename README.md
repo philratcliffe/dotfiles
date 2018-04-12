@@ -43,6 +43,11 @@ $ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-c
 -o ~/.git-completion.bash
 ```
 
+To setup gitconfig
+```bash
+$ cp gitconfig ~/.gitconfig
+```
+
 ## Missing dot
 I added the config files to git without the leading dot (period, full stop).
 Just copy the file to the correct name. For example,

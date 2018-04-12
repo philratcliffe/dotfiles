@@ -4,8 +4,6 @@
 This repo is where I keep my dotfiles.
 
 ## Vim Plugins
-
-
 Use vundle to install plugins
 
 ```bash
@@ -37,11 +35,13 @@ $ sudo apt-get install vim-gui-common
 $ sudo apt-get install vim-runtime
 ```
 
+## git
+To get the latest git-completion.bash
 
-## mac OS
-With iTerm2 and Mac OS, .bashrc is not sourced. However, with the
-~/.bash_profile is sourced. So a source .bashrc entry in ~/.bash_profile
-does the job.
+```bash
+$ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
+-o ~/.git-completion.bash
+```
 
 ## Missing dot
 I added the config files to git without the leading dot (period, full stop).
@@ -49,8 +49,16 @@ Just copy the file to the correct name. For example,
 
 ```bash
 $cp dotfiles/tmux.conf ~/.tmux.conf
-```bash
+```
 
 ```bash
 $cp dotfiles/cdpath ~/.cdpath etc.
-```bash
+```
+## bashrc
+
+### mac OS
+With iTerm2 and Mac OS, .bashrc is not sourced. However, the
+~/.bash_profile is sourced. So a source .bashrc entry in ~/.bash_profile
+does the job.
+
+

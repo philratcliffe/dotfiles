@@ -113,6 +113,7 @@ if ! shopt -oq posix; then
 fi
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/projects
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
 source /usr/local/bin/virtualenvwrapper.sh
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 set -o vi
@@ -122,5 +123,9 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 # tmux auto complete
 source ~/tmux-complete.sh
+
+# git stuff
+source ~/.git-completion.bash
+
 
 . .cdpath

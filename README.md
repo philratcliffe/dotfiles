@@ -39,8 +39,7 @@ $ sudo apt-get install vim-runtime
 To get the latest git-completion.bash
 
 ```bash
-$ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
--o ~/.git-completion.bash
+$ curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 ```
 
 To setup gitconfig

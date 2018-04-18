@@ -3,6 +3,9 @@
     email = phil@philratcliffe.co.uk
     name = Phil Ratcliffe
 
+[push]
+default = simple
+
 [alias]
     co = checkout
     ci = commit

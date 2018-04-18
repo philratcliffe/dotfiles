@@ -3,6 +3,15 @@
 ## Overview
 This repo is where I keep my dotfiles.
 
+## Missing dot
+I added the config files to git without the leading dot (period, full stop).
+Just copy the file to the correct name.
+
+## Setup vim intialisation file
+```bash
+$ cp vimrc ~/.vimrc
+```
+
 ## Vim Plugins
 Use vundle to install plugins
 
@@ -47,9 +56,6 @@ To setup gitconfig
 $ cp gitconfig ~/.gitconfig
 ```
 
-## Missing dot
-I added the config files to git without the leading dot (period, full stop).
-Just copy the file to the correct name. For example,
 
 ```bash
 $cp dotfiles/tmux.conf ~/.tmux.conf

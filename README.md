@@ -1,7 +1,7 @@
 # My dotfiles
 
 ## Overview
-This repo is where I keep my dotfiles.
+My dotfiles.
 
 ## Missing dot
 I added the config files to git without the leading dot (period, full stop).
@@ -70,5 +70,8 @@ $cp dotfiles/cdpath ~/.cdpath etc.
 With iTerm2 and Mac OS, .bashrc is not sourced. However, the
 ~/.bash_profile is sourced. So a source .bashrc entry in ~/.bash_profile
 does the job.
+
+### Debian 9
+Had to install vim the default vim couldn't handle Vundle.
 
 

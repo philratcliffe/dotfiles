@@ -72,7 +72,7 @@ With iTerm2 and Mac OS, .bashrc is not sourced. However, the
 does the job.
 
 ### Debian 9
-Had to install vim as the default vim couldn't handle Vundle.
-Also had to run "sudo apt install vim-python-jedi"
+I needed to install vim as the default vim couldn't handle Vundle. Also I 
+needed to run "sudo apt install vim-python-jedi"
 
 

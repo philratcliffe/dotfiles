@@ -11,12 +11,18 @@ call vundle#begin()
 " let Vundle manage Vundle
 " required!
 "Plugin 'gmarik/vundle'
-Plugin 'kien/ctrlp.vim' 
 Plugin 'davidhalter/jedi-vim'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'kien/ctrlp.vim'
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
 
 " Theme
 Plugin 'morhetz/gruvbox'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'chriskempson/base16-vim'
+
+filetype on            " enables filetype detection
+filetype plugin on     " enables filetype specific plugins
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -69,10 +75,12 @@ au InsertLeave * match ExtraWhitespace /\s\+$/
 " Use 'set termguicolors' below instead of t_Co=256 if using terminal with true color
 " support like gnome-terminal. Otherwise source the 256 color in link above to make the
 " colors right.
-set t_Co=256           "use 256 colors
+set t_Co=256           "use 256 color
+"set termguicolors
+"let base16colorspace=256  " Access colors present in 256 colorspace
 
 let g:gruvbox_italic=1 "allow italics
-colorscheme gruvbox    "set vim colorscheme
+colorscheme dracula    "set vim colorscheme
 set background=dark "use dark variant
 
 " Enable syntax highlighting
@@ -212,3 +220,9 @@ inoremap jj <esc>
 nnoremap <Leader>w :w<CR>
 set iskeyword-=_
 set nrformats=
+"Mode Settings
+
+let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+set path+=**

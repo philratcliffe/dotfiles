@@ -67,25 +67,25 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 #source ~/.git-completion.bash
 
 
-## pyenv
-if which pyenv > /dev/null; then eval "$(pyenv init -)"; fi
-
 # PATH for python
 PATH=/usr/local/share/python:${PATH}
 # for homebrewed bottles
 PATH=/usr/local/bin:/usr/local/sbin:${PATH}
 # for custom scripts
 PATH=$HOME/bin:${PATH}
-# for pyenv
-PYENV_ROOT=$HOME/.pyenv
-PATH=$PYENV_ROOT/bin:${PATH}
 
-export PATH
 # For compilers to find zlib you may need to set:
 export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
 export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
 
-# For pkg-config to find zlib you may need to set:
 export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
-eval "$(pyenv init -)"
-export PATH="/usr/local/Cellar/python36/3.6.8_2/bin:${PATH}"
+
+#for pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init --path)"
+fi
+
+export WORKON_HOME=~/virtual_envs
+source /usr/local/bin/virtualenvwrapper.sh

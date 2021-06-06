@@ -1,17 +1,8 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
 
-# If not running interactively, don't do anything
-case $- in
-    *i*) ;;
-      *) return;;
-esac
+export HISTFILESIZE=999999999               # big big history
+export HISTSIZE=999999999
+export HISTFILE=~/.zsh_history
 
-# for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
-export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
-export HISTSIZE=100000                   # big big history
-export HISTFILESIZE=100000               # big big history
 
 
 # check the window size after each command and, if necessary,
@@ -51,11 +42,10 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
+# enable vi mode
+bindkey -v
+
 export PROJECT_HOME=$HOME/projects
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-#source /usr/local/bin/virtualenvwrapper.sh
-# export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
-set -o vi
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"

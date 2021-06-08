@@ -79,3 +79,4 @@ fi
 
 export WORKON_HOME=~/virtual_envs
 source /usr/local/bin/virtualenvwrapper.sh
+PROMPT='%~ %# '

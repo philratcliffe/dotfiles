@@ -1,4 +1,4 @@
-let mapleader = "\<Space>"              " The leader is used to begin many hotkey sequences 
+let mapleader = ","
 
 " Setup Vundle to manage your plugins
 "  git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
@@ -11,10 +11,12 @@ call vundle#begin()
 " let Vundle manage Vundle
 " required!
 "Plugin 'gmarik/vundle'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Plugin 'tpope/vim-fugitive'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'kien/ctrlp.vim'
 Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+Plugin 'ajh17/vimcompletesme'
 
 " Theme
 Plugin 'morhetz/gruvbox'

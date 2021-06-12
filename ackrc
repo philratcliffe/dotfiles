@@ -9,3 +9,4 @@
 
 # ignore virtual env directories
 --ignore-dir=venv
+--ignore-dir=.env

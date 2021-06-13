@@ -4,7 +4,7 @@
 My dotfiles.
 
 ## Missing dot
-I added the config files to git without the leading dot (period, full stop).
+The config files are stored in git without the leading dot (period, full stop).
 Just copy the file to the correct name.
 
 ## Setup vim intialisation file

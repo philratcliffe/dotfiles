@@ -1,7 +1,5 @@
 # My dotfiles
 
-## Overview
-My dotfiles.
 
 ## Missing dot
 I added the config files to git without the leading dot (period, full stop).

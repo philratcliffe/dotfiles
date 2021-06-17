@@ -33,9 +33,6 @@ export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 # tmux auto complete
 #source ~/tmux-complete.sh
 
-# git stuff
-#source ~/.git-completion.bash
-
 
 # PATH for python
 PATH=/usr/local/share/python:${PATH}
@@ -61,3 +58,10 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init --path)"
 fi
 
+# Load Git completion
+zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+fpath=(~/.zsh $fpath)
+#
+autoload -Uz compinit && compinit
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

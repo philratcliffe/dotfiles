@@ -5,6 +5,16 @@
 The config files are stored in git without the leading dot (period, full stop).
 Just copy the file to the correct name.
 
+## Setup neovim intialisation file
+```bash
+/Users/philratcliffe/.config/nvim/dotfiles
+```
+
+## Setup neovim plugins setup 
+```bash
+$ cp  plugins.vim ~/.configs/nvim/vim-plug
+```
+
 ## Setup vim intialisation file
 ```bash
 $ cp vimrc ~/.vimrc
